@@ -144,8 +144,10 @@ int main(int argc, char *argv[]) {
   grid.printGrid();
   deduce(grid);
   grid.printGrid();
-  solveSudoku(grid);
-  grid.printGrid();
+  if(solveSudoku(grid))
+    grid.printGrid();
+  else
+    cout << "\nUnsolvable puzzle.\n";
   
   return 0;
 }
